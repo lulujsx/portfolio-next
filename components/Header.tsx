@@ -1,5 +1,7 @@
 import {AiFillGithub} from "react-icons/ai"
 import {AiOutlineMail} from "react-icons/ai"
+import {FaLinkedin} from "react-icons/fa"
+import {ImTwitch} from "react-icons/im"
 import {motion} from "framer-motion"
 
 
@@ -24,16 +26,15 @@ export default function ({}: Props) {
                 duration: 1.5,
 
             }}
-            className="flex flex-row items-center">
-            {/* Social Icons */}   
+            className="flex flex-row items-center gap-5 text-pink">
             <a href="https://github.com/luanavjs" target="_blank">
-                <AiFillGithub size={40} className="text-gray"/>
+                <AiFillGithub size={42}/>
             </a>
-            <a href="https://github.com/luanavjs" target="_blank">
-                <AiFillGithub size={40} className="text-gray"/>
+            <a href="https://www.linkedin.com/in/luanavallejos/" target="_blank">
+                <FaLinkedin size={40}/>
             </a>
-            <a href="https://github.com/luanavjs" target="_blank">
-                <AiFillGithub size={40} className="text-gray"/>
+            <a href="https://www.twitch.tv/grinderbunny" target="_blank">
+                <ImTwitch size={35}/>
             </a>
         </motion.div>
 
@@ -51,7 +52,7 @@ export default function ({}: Props) {
             transition={{
                 duration: 1.5
             }}
-            className="flex flex-row items-center text-gray cursor-pointer"
+            className="flex flex-row items-center text-pink cursor-pointer gap-2"
         >
                 <AiOutlineMail size={40}/>
                 <p className="uppercase hidden md:inline-flex text-sm">Contact me</p>
