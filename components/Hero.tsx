@@ -22,7 +22,7 @@ export default function Hero({}: Props) {
             <h2 className="text-sm uppercase text-pink pb-2 tracking-[15px]">Software Developer</h2>
             <h1 className="text-5xl lg:text-6xl font-semibold">
                 <span className="mr-3">{text}</span>
-                <Cursor cursorColor="#0876C6"/>
+                <Cursor cursorColor="#d14888"/>
             </h1>
 
             <div className="pt-5">
