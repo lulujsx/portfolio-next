@@ -3,6 +3,7 @@ import {AiOutlineMail} from "react-icons/ai"
 import {FaLinkedin} from "react-icons/fa"
 import {ImTwitch} from "react-icons/im"
 import {motion} from "framer-motion"
+import Link from "next/link"
 
 
 type Props = {}
@@ -37,26 +38,27 @@ export default function ({}: Props) {
                 <ImTwitch size={35}/>
             </a>
         </motion.div>
-
-        <motion.div
-            initial={{
-                x: 500,
-                opacity:0,
-                scale: 0.5
-            }}
-            animate={{
-                x: 0,
-                opacity: 1,
-                scale: 1
-            }}
-            transition={{
-                duration: 1.5
-            }}
-            className="flex flex-row items-center text-pink cursor-pointer gap-2"
-        >
-                <AiOutlineMail size={40}/>
-                <p className="uppercase hidden md:inline-flex text-sm">Contact me</p>
-        </motion.div>
+        <Link href="#contact">
+            <motion.div
+                initial={{
+                    x: 500,
+                    opacity:0,
+                    scale: 0.5
+                }}
+                animate={{
+                    x: 0,
+                    opacity: 1,
+                    scale: 1
+                }}
+                transition={{
+                    duration: 1.5
+                }}
+                className="flex flex-row items-center text-pink cursor-pointer gap-2"
+            >
+                    <AiOutlineMail size={40}/>
+                    <p className="uppercase hidden md:inline-flex text-sm">Contact me</p>
+            </motion.div>
+        </Link>
     </header>
   )
 }
