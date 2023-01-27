@@ -1,9 +1,31 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {motion} from "framer-motion"
+import { IResponse } from '../types/IResponse'
 
 type Props = {}
 
 function About({}: Props) {
+
+  const [data, setData] = useState<IResponse[]>([])
+    
+  const callApi = async() => {
+    try {
+        fetch('/api/personalInfo')
+        .then((res)=> res.json())
+        .then((data) =>{
+            setData(data)
+            console.log(data);
+        })
+    }
+    catch(err) {
+        console.error(err)
+    }
+  }
+
+  useEffect(() => {
+    callApi();
+  }, []);
+
   return (
     <motion.div
         initial={{opacity:0}} 
@@ -31,7 +53,7 @@ function About({}: Props) {
                 Here is a <span className="underline decoration-pink/70">little</span> background
             </h4>
             <p className="text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda dolorum, quibusdam vel voluptatum a, consequuntur doloribus nemo facere quasi laudantium officia minima ut natus ipsa harum obcaecati. Pariatur, eveniet impedit!
+                {data?.about}
             </p>
         </div>
     </motion.div>
