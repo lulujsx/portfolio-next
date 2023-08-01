@@ -15,11 +15,11 @@ export default function Skills({}: Props) {
         Skills
       </h3>
 
-      <h3 className="absolute top-36 uppercase tracking-[3px] text-pink text-sm xl:text-xl xl:mt-7">
-        Programming Technologies i've been using
+      <h3 className="absolute top-36 uppercase tracking-[3px] text-pink text-xs xl:text-xl xl:mt-7">
+        Technologies i've been using
       </h3>
 
-      <div className="grid grid-cols-4 md:grid-cols-4 xl:grid-cols-6 gap-5 xl:gap-9 mt-14 md:mt-9 xl:mt-0">
+      <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-5 xl:gap-9 mt-14 md:mt-9 xl:mt-0">
         <Skill />
         <Skill />
         <Skill />
