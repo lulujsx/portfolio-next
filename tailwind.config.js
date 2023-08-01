@@ -11,6 +11,10 @@ module.exports = {
       'black': '#000000',
       'pink': '#d14888',
       'gray': '#838284'
+    },
+    fontFamily: {
+      press2p: ['var(--font-press2p)'],
+      open: ['var(--font-open)'],
     }
   },
   plugins: [

@@ -1,57 +1,47 @@
-import {useForm, SubmitHandler} from "react-hook-form"
 
-type Inputs = {
-    name: string;
-    email: string;
-    subject: string;
-    message: string;
-}
+import {AiFillGithub} from "react-icons/ai"
+import {AiOutlineMail} from "react-icons/ai"
+import {FaLinkedin} from "react-icons/fa"
+import {SiLetterboxd} from "react-icons/si"
+import {motion} from "framer-motion"
 
 type Props = {
 
 }
 
 export default function ContactMe({}: Props) {
-    const {
-        register,
-        handleSubmit,
-    } = useForm<Inputs>()
 
-    const onSubmit: SubmitHandler<Inputs> = (formData) => {
-        window.location.href = `mailto:pukeraimbows@gmail?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`
-    }
 
   return (
     <div className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl
     px-10 justify-evenly mx-auto items-center">
-        <h3 className="absolute top-24 uppercase tracking-[20px] text-pink text-2xl">Contact</h3>
+        <h3 className="absolute top-24 uppercase tracking-[20px] text-pink text-2xl font-press2p">Contact</h3>
         <div className="flex flex-col space-y-10">
-            <h4 className="text-4xl font-semibold text-center">If you have something to say, <span className="decoration-pink/80 underline">say it.</span></h4>
+            <h4 className="text-4xl font-semibold text-center">Let's <span className="decoration-pink/80 underline">connect!</span></h4>
         </div>
-        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto">
-            <div className="flex space-x-2">
-                <input 
-                    {...register('name')}
-                    className="contactInput"
-                    placeholder="Name"
-                    type="text" 
-                />
-                <input 
-                    {...register('email')}
-                    className="contactInput"
-                    placeholder="Email"
-                    type="email"
-                />
-            </div>
-            <input 
-                {...register('subject')}
-                className="contactInput"
-                placeholder="Subject"
-                type="text"
-            />
-            <textarea {...register('message')} placeholder="Message" className="contactInput"/>
-            <button className="bg-pink py-5 px-10 rounded-md text-black font-bold text-lg" type="submit">Submit</button>
-        </form>
+        <motion.div
+            initial={{
+                x: 200
+            }}
+            transition={{
+                duration: 1.2
+            }}
+            whileInView={{
+                opacity: 1,
+                x: 0
+            }}
+            viewport={{once:true}}
+            className="flex flex-row items-center gap-5 text-pink">
+            <a href="https://github.com/lulujsx" target="_blank">
+                <AiFillGithub size={100}/>
+            </a>
+            <a href="https://www.linkedin.com/in/luanavallejos/" target="_blank">
+                <FaLinkedin size={100}/>
+            </a>
+            <a href="https://www.letterboxd.com/luluxita" target="_blank">
+                <SiLetterboxd size={100}/>
+            </a>
+        </motion.div>
     </div>
   )
 }

@@ -10,7 +10,7 @@ import WorkExperience from "../components/WorkExperience";
 
 export default function Home() {
   return (
-    <div className="bg-black text-white h-screen snap-y snap-mandatory overflow-y-scroll 
+    <div className=" bg-black text-white h-screen snap-y snap-mandatory overflow-y-scroll 
     overflow-x-hidden z-0 scrollbar scrollbar-track-gray/20 scrollbar-thumb-pink/80">
       <Head>
         <title>Luana Vallejos</title>
@@ -35,7 +35,7 @@ export default function Home() {
         <ContactMe/>
       </section>
       <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
+        <footer className="hidden sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
             <img className="h-10 w-10 rounded-full cursor-pointer filter grayscale hover:grayscale-0" src="https://i.imgur.com/D41Pm3w.jpg" alt="" />
           </div>
