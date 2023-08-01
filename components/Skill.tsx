@@ -6,7 +6,7 @@ type Props = {
 
 export default function Skill({directionLeft}: Props) {
   return (
-    <div className="group relative flex cursor-pointer">
+    <div className="flex flex-col items-center justify-center cursor-pointer">
         <motion.img
             initial={{
                 x: directionLeft ? -200 : 200,
@@ -14,15 +14,19 @@ export default function Skill({directionLeft}: Props) {
             }}
             transition={{duration: 1}}
             whileInView={{opacity: 1, x: 0}}
-            className="rounded-full border border-pink object-cover w-24 h-24 md:w-28 md:h-28 
+            className="rounded-full border border-pink object-cover w-16 h-16 md:w-28 md:h-28 
             xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
-            src="https://i.imgur.com/D41Pm3w.jpg"/>
-            <div className="absolute opacity-0 group-hover:opacity-80 transition duration-300 ease-in-out 
-            group-hover:bg-white h-24 w-24 md:w-28 md:h-28 xl:h-32 xl:w-32 rounded-full z-0">
-                <div className="flex items-center justify-center h-full">
-                    <p className="text-md lg:text-xl font-bold text-black opacity-100">TailwindCSS</p>
-                </div>
-            </div>
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/>
+        <motion.div
+            initial={{
+                x: directionLeft ? -200 : 200,
+                opacity: 0
+            }}
+            transition={{duration: 1.7}}
+            whileInView={{opacity: 1, x: 0}}
+        >
+            <h4 className="text-sm xl:text-xl">TypeScript</h4>
+        </motion.div>
     </div>
   )
 }
