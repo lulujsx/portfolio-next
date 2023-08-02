@@ -2,30 +2,13 @@ import React, {useState, useEffect} from 'react'
 import {motion} from "framer-motion"
 import { IResponse } from '../types/IResponse'
 
-type Props = {}
+type Props = {
+    data: IResponse
+}
 
-function About({}: Props) {
+function About({data}: Props) {
 
-  const [data, setData] = useState<IResponse>(Object)
-    
-  const callApi = async() => {
-    console.log("data", data)
-    try {
-        fetch('/api/personalInfo')
-        .then((res)=> res.json())
-        .then((data) =>{
-            setData(data)
-            console.log(data);
-        })
-    }
-    catch(err) {
-        console.error(err)
-    }
-  }
-
-  useEffect(() => {
-    callApi();
-  }, []);
+    const {photo, about} = data
 
   return (
     <motion.div
@@ -35,7 +18,7 @@ function About({}: Props) {
         className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
         <h3 className="absolute top-24 uppercase tracking-[20px] text-pink text-2xl font-press2p">About</h3>
         <motion.img 
-            src="https://i.imgur.com/D41Pm3w.jpg"
+            src={photo}
             initial={{
                 x: -200
             }}
@@ -51,10 +34,10 @@ function About({}: Props) {
         />
         <div className="space-y-6 md:px-10 max-w-3 break-words">
             <h4 className="text-3xl md:text-4xl font-semibold">
-                Here is a <span className="underline decoration-pink/70">little</span> background
+                Hello, every-<span className="underline decoration-pink/70">nyan</span>!
             </h4>
             <p className="text-xs md:text-xl">
-                {data.about}
+                {about}
             </p>
         </div>
     </motion.div>

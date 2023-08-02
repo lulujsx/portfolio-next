@@ -20,70 +20,79 @@ export default function handler(
   res.status(200).json({ 
     name: 'Luana Vallejos',
     tags: ['FullStack Developer, UI Designer, STEM Student'],
-    photo: '',
-    about: "I'm from Buenos Aires, Argentina. I study Computer Science B.Sc. at Universidad Nacional Del Oeste. I'm in search of new challenges to improve my language and development skills. During my last job, I have gained valuable experience working as a FrontEnd Developer with a focus on the React ecosystem. In my free time, I love watching Horror movies, read manga and listen to music.",
+    photo: 'https://i.pinimg.com/564x/af/38/3f/af383f48f2d3ea0ae5bd7b505d22c2c9.jpg',
+    about: "I'm from Buenos Aires, Argentina. I study Computer Science B.Sc. at Universidad Nacional Del Oeste. Passionate about web, design, problem solving and everything related to computing. During my last job, I have gained valuable experience working as a frontend developer with a focus on the React ecosystem. I am eager to continue growing as a fullstack developer, exploring new technologies, taking new challanges and delivering exceptional user experiences. In my free time, I love watching Horror movies, read manga and listen to music.",
     experience: [
       {
         id: '0',
         company: 'InfinixSoft',
         position: 'React Developer',
-        date_start: 'April 2022',
-        date_end: 'Present',
+        date_start: 'March 2022',
+        date_end: 'April 2023',
         technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg','https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg','https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'],
-        points: ['Developing from scratch and maintaining the user interface.', 'Optimizing the user experience.', 'SEO best practices.', 'Implementing responsive design on mobile websites.', 'Integration with APIs and databases.']
+        description: "Developing and maintaining the user interface. Optimizing the user experience. SEO best practices. Implementing responsive design on mobile websites. Integration with APIs and databases."
+      },
+      {
+        id: '1',
+        company: 'Estetic Laser',
+        position: 'Graphic Designer',
+        date_start: 'February 2019',
+        date_end: 'July 2021',
+        technologies: [],
+        description: 'Create engaging and shareable social media posts, including static images, animated graphics, infographics, short videos, and other visual assets for branding. Raw photo editing and retouching.'
       }
     ],
     skills: [
       {
         id: '0',
-        techName: 'ReactJS',
-        techLogo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+        tech_name: 'ReactJS',
+        tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
       },
       {
         id: '1',
-        techName: 'NextJS',
-        techLogo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+        tech_name: 'NextJS',
+        tech_logo: 'https://i.imgur.com/2zLQtbE.png',
       },
       {
         id: '2',
-        techName: 'NodeJS',
-        techLogo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+        tech_name: 'NodeJS',
+        tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
       },
       {
         id: '3',
-        techName: 'Express',
-        techLogo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg',
+        tech_name: 'Express',
+        tech_logo: 'https://i.imgur.com/pRtyttv.png',
       },
       {
         id: '4',
-        techName: 'TypeScript',
-        techLogo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+        tech_name: 'TypeScript',
+        tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
       },
       {
         id: '5',
-        techName: 'JavaScript',
-        techLogo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+        tech_name: 'JavaScript',
+        tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
       },
       {
         id: '6',
-        techName: 'TailwindCSS',
-        techLogo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
+        tech_name: 'TailwindCSS',
+        tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg',
       },
       {
         id: '7',
-        techName: 'MongoDB',
-        techLogo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+        tech_name: 'MongoDB',
+        tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
       },
 
     ],
     projects: [
       {
         id: '0',
-        projectName: 'Manga App',
-        projectDescription: 'Aplicación web que muestra un listado de mangas que leí/estoy leyendo actualmente. Para ver los detalles de cada manga, hay que registrarse e iniciar sesión.',
-        projectImg: '',
-        projectLink: 'https://manga-app-lulu.vercel.app/',
-        projectRepo: 'https://github.com/luanavjs/manga-app-frontend',
+        name: 'Guides UNO',
+        description: "This is a project promoted by GNUno, which consists of a set of 'study plans' of different technologies for someone who is just starting out has a path to follow, together with resources such as videos, tutorials and recommended bibliography, in addition to the support that the community can give in telegram groups.",
+        image: 'https://i.imgur.com/cyr7Gxv.png',
+        link: 'https://manga-app-lulu.vercel.app/',
+        code: 'https://github.com/luanavjs/manga-app-frontend',
       }
     ]
   })

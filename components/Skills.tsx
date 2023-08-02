@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
-import Skill from "./Skill";
+import { ISkill } from '../types/IResponse'
+import Skill from './Skill';
 
-type Props = {};
+type Props = {
+  data: ISkill[]
+}
 
-export default function Skills({}: Props) {
+export default function Skills({data}: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -20,12 +23,9 @@ export default function Skills({}: Props) {
       </h3>
 
       <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-5 xl:gap-9 mt-14 md:mt-9 xl:mt-0">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+        {data?.map((skill: ISkill)=> (
+          <Skill skill={skill} key={skill.id}/>
+        ))}
       </div>
     </motion.div>
   );

@@ -1,3 +1,4 @@
+import React, {useState, useEffect} from 'react'
 import Head from "next/head";
 import Link from "next/link";
 import About from "../components/About";
@@ -7,8 +8,31 @@ import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
+import { IResponse } from '../types/IResponse'
+
 
 export default function Home() {
+  const [data, setData] = useState<IResponse>(Object)
+    
+  const callApi = async() => {
+    console.log("data", data)
+    try {
+        fetch('/api/personalInfo')
+        .then((res)=> res.json())
+        .then((data) =>{
+            setData(data)
+        })
+    }
+    catch(err) {
+        console.error(err)
+    }
+  }
+
+  useEffect(() => {
+    callApi();
+  }, []);
+
+
   return (
     <div className=" bg-black text-white h-screen snap-y snap-mandatory overflow-y-scroll 
     overflow-x-hidden z-0 scrollbar scrollbar-track-gray/20 scrollbar-thumb-pink/80">
@@ -20,13 +44,13 @@ export default function Home() {
         <Hero/>
       </section>
       <section id="about" className="snap-center">
-        <About/>
+        <About data={data}/>
       </section>
       <section id="experience" className="snap-center">
-        <WorkExperience/>
+        <WorkExperience data={data.experience}/>
       </section>
       <section id="skills" className="snap-start">
-        <Skills/>
+        <Skills data={data.skills}/>
       </section>
       <section id="projects" className="snap-start">
         <Projects/>

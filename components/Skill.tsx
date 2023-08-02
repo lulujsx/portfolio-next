@@ -1,10 +1,13 @@
 import {motion} from "framer-motion"
+import { ISkill } from '../types/IResponse'
 
 type Props = {
-    directionLeft?: boolean
+    directionLeft?: boolean,
+    skill: ISkill
 }
 
-export default function Skill({directionLeft}: Props) {
+export default function Skill({directionLeft, skill}: Props) {
+    const {tech_name, tech_logo} = skill
   return (
     <div className="flex flex-col items-center justify-center cursor-pointer">
         <motion.img
@@ -14,9 +17,9 @@ export default function Skill({directionLeft}: Props) {
             }}
             transition={{duration: 1}}
             whileInView={{opacity: 1, x: 0}}
-            className="rounded-full border border-pink object-cover w-16 h-16 md:w-28 md:h-28 
+            className="object-cover w-16 h-16 md:w-28 md:h-28 
             xl:w-32 xl:h-32 filter group-hover:grayscale transition duration-300 ease-in-out"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"/>
+            src={tech_logo}/>
         <motion.div
             initial={{
                 x: directionLeft ? -200 : 200,
@@ -25,7 +28,7 @@ export default function Skill({directionLeft}: Props) {
             transition={{duration: 1.7}}
             whileInView={{opacity: 1, x: 0}}
         >
-            <h4 className="text-sm xl:text-xl">TypeScript</h4>
+            <h4 className="text-sm xl:text-xl">{tech_name}</h4>
         </motion.div>
     </div>
   )

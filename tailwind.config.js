@@ -10,6 +10,7 @@ module.exports = {
       'white': '#ffffff',
       'black': '#000000',
       'pink': '#d14888',
+      'lightpink': '#FB9DC6',
       'gray': '#838284'
     },
     fontFamily: {
