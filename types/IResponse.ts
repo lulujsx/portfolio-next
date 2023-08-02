@@ -5,7 +5,7 @@ export interface IResponse {
     about: string,
     experience: IExperience[],
     skills: ISkill[],
-    projects: IProject
+    projects: IProject[]
 }
 
 export interface IExperience {

@@ -43,7 +43,7 @@ export default function ContactMe({}: Props) {
                 x: 0
             }}
             viewport={{once:true}}
-            className="flex flex-row items-center gap-5 text-pink">
+            className="flex flex-row items-center gap-5 text-pink md:ml-7 xl:ml-0">
             <a href="https://github.com/lulujsx" target="_blank">
                 <AiFillGithub className="text-7xl xl:text-8xl"/>
             </a>

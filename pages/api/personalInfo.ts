@@ -93,7 +93,16 @@ export default function handler(
         image: 'https://i.imgur.com/cyr7Gxv.png',
         link: 'https://manga-app-lulu.vercel.app/',
         code: 'https://github.com/luanavjs/manga-app-frontend',
-      }
+      },
+      {
+        id: '1',
+        name: 'Guides UNO',
+        description: "This is a project promoted by GNUno, which consists of a set of 'study plans' of different technologies for someone who is just starting out has a path to follow, together with resources such as videos, tutorials and recommended bibliography, in addition to the support that the community can give in telegram groups.",
+        image: 'https://i.imgur.com/cyr7Gxv.png',
+        link: 'https://soyautodidacta.vercel.app/',
+        code: 'https://github.com/luanavjs/manga-app-frontend',
+      },
+      
     ]
   })
 }

@@ -53,7 +53,7 @@ export default function Home() {
         <Skills data={data.skills}/>
       </section>
       <section id="projects" className="snap-start">
-        <Projects/>
+        <Projects data={data.projects}/>
       </section>
       <section id="contact" className="snap-start">
         <ContactMe/>

@@ -36,7 +36,7 @@ function About({data}: Props) {
             <h4 className="text-3xl md:text-4xl font-semibold">
                 Hello, every-<span className="underline decoration-pink/70">nyan</span>!
             </h4>
-            <p className="text-xs md:text-xl">
+            <p className="text-xs md:text-sm xl:text-xl">
                 {about}
             </p>
         </div>

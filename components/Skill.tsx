@@ -9,7 +9,7 @@ type Props = {
 export default function Skill({directionLeft, skill}: Props) {
     const {tech_name, tech_logo} = skill
   return (
-    <div className="flex flex-col items-center justify-center cursor-pointer">
+    <div className="flex flex-col items-center gap-4 cursor-pointer">
         <motion.img
             initial={{
                 x: directionLeft ? -200 : 200,

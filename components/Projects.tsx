@@ -1,10 +1,14 @@
 import React from 'react'
+import { IProject } from '../types/IResponse'
+import Link from "next/link"
 import {motion} from "framer-motion"
 
-type Props = {}
+type Props = {
+  data: IProject[]
+}
 
-export default function Projects({}: Props) {
-  const projects = [1,2,3,4]
+export default function Projects({data}: Props) {
+  
   return (
     <motion.div
       initial={{opacity:0}}
@@ -12,24 +16,26 @@ export default function Projects({}: Props) {
       transition={{duration: 1.5}}
       className="h-screen relative flex overflow-hidden flex-col text-center md:flex-row xl:max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute xl:top-24 top-20 uppercase lg:tracking-[20px] tracking-[15px] text-pink xl:text-2xl text-xl font-press2p">Projects</h3>
+      <h3 className="absolute md:top-24 top-16 uppercase lg:tracking-[20px] tracking-[15px] text-pink xl:text-2xl text-xl font-press2p">Projects</h3>
       <div className="break-words xl:w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray/20 scrollbar-thumb-pink/80">
-        {projects.map((project,index)=>(
-          <div className="mt-9 md:mt-0 xl:mt-24 xl:w-screen flex-shrink-0 snap-center flex flex-col 
-            space-y-5 items-center justify-center py-24 md:px-40" key={index}>
+        {data?.map((project: IProject) =>(
+          <div className="mt-9 xl:mt-24 xl:w-screen flex-shrink-0 snap-center flex flex-col md:flex-row xl:flex-col
+            space-y-5 items-center justify-center py-24 md:px-36" key={project.id}>
             <motion.img
               initial={{y:-300}}
               transition={{duration:1.2}}
               whileInView={{opacity:1, y: 0 }}
               viewport={{once: true}}
-              src="https://i.imgur.com/cyr7Gxv.png"
-              className="rounded-xl xl:h-96 h-28 w-52 xl:w-[600px] object-cover" alt="project image" />
+              src={project.image}
+              className="rounded-xl xl:h-96 md:h-40 md:w-72 h-28 w-52 xl:w-[600px] object-cover" alt="project image" />
             <div className="flex flex-col items-center space-y-4 xl:space-y-10 
             px-0 md:px-10 xl:max-w-6xl max-w-sm">
-              <h4 className="text-md xl:text-4xl font-semibold text-center">Guides UNO</h4>
+              <h4 className="text-base md:text-xl xl:text-4xl font-semibold text-center">{project.name}</h4>
               <div className="px-2 md:-p-10">
-                <p className='text-xs md:text-xl'>This is a project promoted by GNUno, which consists of a set of 'study plans' of different technologies for someone who is just starting out has a path to follow, together with resources such as videos, tutorials and recommended bibliography, in addition to the support that the community can give in telegram groups.</p>
-                <button>Link</button>
+                <p className='text-xs md:text-base'>{project.description}</p>
+                <Link href={project.link} target="_blank">
+                  <button className='linkButton mt-4'>Link</button>
+                </Link>
               </div>  
             </div>
           </div>
