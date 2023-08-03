@@ -6,7 +6,7 @@ type Props = {
     experience: IExperience
 }
 
-export default function ({experience}: Props) {
+export default function ExperienceCard({experience}: Props) {
     const {company,position,date_start,date_end,description} = experience
   return (
     <article className="flex flex-col rounded-lg items-center space-y-3 md:space-y-7 shrink-0 w-64 space-x-4 
