@@ -8,7 +8,7 @@ import Link from "next/link"
 
 type Props = {}
 
-export default function ({}: Props) {
+export default function Header({}: Props) {
   return (
   
     <header className="flex items-start justify-between sticky top-0 max-w-7xl mx-auto z-20 p-5 xl:items-center">
