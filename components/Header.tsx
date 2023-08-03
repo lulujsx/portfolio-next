@@ -30,7 +30,7 @@ export default function ({}: Props) {
             }}
             className="flex flex-row items-center gap-5 text-pink">
             <Link href="#hero" className="text-2xl">
-                Luana
+                
             </Link>
         </motion.div>
         {/* <Link href="#contact">

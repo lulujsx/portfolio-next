@@ -15,7 +15,7 @@ export default function ContactMe({}: Props) {
   return (
     <div className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl
     px-10 xl:justify-evenly justify-center space-y-10 mx-auto items-center">
-        <h3 className="hidden xl:block absolute top-24 uppercase tracking-[20px] text-pink text-2xl font-press2p">Contact</h3>
+        <h3 className="hidden xl:block absolute top-24 uppercase tracking-[20px] text-yellow text-2xl font-press2p">Contact</h3>
         <motion.div 
             initial={{
                 x: -200
@@ -29,7 +29,7 @@ export default function ContactMe({}: Props) {
             }}
             viewport={{once:true}}
             className="flex flex-col space-y-10">
-            <h4 className="text-4xl xl:text-5xl font-semibold text-center xl:tracking-[15px]">Let's <span className="decoration-pink/80 underline">connect!</span></h4>
+            <h4 className="text-4xl xl:text-5xl font-semibold text-center xl:tracking-[15px]">Let&apos;s <span className="decoration-pink/80 underline">connect!</span></h4>
         </motion.div>
         <motion.div
             initial={{
@@ -50,8 +50,8 @@ export default function ContactMe({}: Props) {
             <a href="https://www.linkedin.com/in/luanavallejos/" target="_blank">
                 <FaLinkedin className="text-7xl xl:text-8xl"/>
             </a>
-            <a href="https://www.letterboxd.com/luluxita" target="_blank">
-                <SiLetterboxd className="text-7xl xl:text-8xl"/>
+            <a href="mailto:luanalorenavallejos@gmail.com" target="_blank">
+                <AiOutlineMail className="text-7xl xl:text-8xl"/>
             </a>
         </motion.div>
     </div>

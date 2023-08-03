@@ -11,7 +11,8 @@ module.exports = {
       'black': '#000000',
       'pink': '#d14888',
       'lightpink': '#FB9DC6',
-      'gray': '#838284'
+      'gray': '#838284',
+      'yellow': "#FFE175"
     },
     fontFamily: {
       press2p: ['var(--font-press2p)'],

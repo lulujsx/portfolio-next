@@ -16,7 +16,7 @@ export default function Projects({data}: Props) {
       transition={{duration: 1.5}}
       className="h-screen relative flex overflow-hidden flex-col text-center md:flex-row xl:max-w-full justify-evenly mx-auto items-center z-0"
     >
-      <h3 className="absolute md:top-24 top-16 uppercase lg:tracking-[20px] tracking-[15px] text-pink xl:text-2xl text-xl font-press2p">Projects</h3>
+      <h3 className="absolute md:top-24 top-16 uppercase lg:tracking-[20px] tracking-[15px] text-yellow xl:text-2xl text-xl font-press2p">Projects</h3>
       <div className="break-words xl:w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray/20 scrollbar-thumb-pink/80">
         {data?.map((project: IProject) =>(
           <div className="mt-9 xl:mt-24 xl:w-screen flex-shrink-0 snap-center flex flex-col md:flex-row xl:flex-col
@@ -32,7 +32,7 @@ export default function Projects({data}: Props) {
             px-0 md:px-10 xl:max-w-6xl max-w-sm">
               <h4 className="text-base md:text-xl xl:text-4xl font-semibold text-center">{project.name}</h4>
               <div className="px-2 md:-p-10">
-                <p className='text-xs md:text-base'>{project.description}</p>
+                <p className='text-xs md:text-base xl:text-xl'>{project.description}</p>
                 <Link href={project.link} target="_blank">
                   <button className='linkButton mt-4'>Link</button>
                 </Link>
