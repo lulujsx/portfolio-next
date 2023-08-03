@@ -24,7 +24,7 @@ export default function Skills({data}: Props) {
 
       <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-5 xl:gap-9 mt-14 md:mt-9 xl:mt-0 justify-center mx-auto">
         {data?.map((skill: ISkill, index: number) => (
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center" key={index}>
             <Skill skill={skill} key={index}/>
           </div>
         ))}
