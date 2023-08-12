@@ -118,8 +118,8 @@ export default function handler(
         image: '/project_gnunoguides.png',
         link: 'https://soyautodidacta.vercel.app/',
         code: 'https://github.com/luanavjs/manga-app-frontend',
-      }
-      
+      },
+
     ]
   })
 }
