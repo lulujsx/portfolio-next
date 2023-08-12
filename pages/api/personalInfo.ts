@@ -103,6 +103,22 @@ export default function handler(
         link: 'https://soyautodidacta.vercel.app/',
         code: 'https://github.com/luanavjs/manga-app-frontend',
       },
+      {
+        id: '3',
+        name: 'Messenger clone',
+        description: "Real-time messaging using Pusher. Message notifications and alerts. Creating and managing chat rooms and channels",
+        image: '/project_gnunoguides.png',
+        link: 'https://soyautodidacta.vercel.app/',
+        code: 'https://github.com/luanavjs/manga-app-frontend', 
+      },
+      {
+        id: '4',
+        name: 'Messenger clone',
+        description: "Real-time messaging using Pusher. Message notifications and alerts. Creating and managing chat rooms and channels",
+        image: '/project_gnunoguides.png',
+        link: 'https://soyautodidacta.vercel.app/',
+        code: 'https://github.com/luanavjs/manga-app-frontend',
+      }
       
     ]
   })
