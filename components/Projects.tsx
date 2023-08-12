@@ -15,9 +15,9 @@ export default function Projects({data}: Props) {
       initial={{opacity:0}}
       whileInView={{opacity:1}}
       transition={{duration: 1.5}}
-      className="h-screen relative flex overflow-hidden flex-col text-center md:flex-row xl:max-w-full justify-evenly mx-auto items-center"
+      className="h-screen relative flex overflow-hidden flex-col text-center md:flex-row xl:max-w-full justify-evenly mx-auto "
     >
-      <h3 className="absolute top-16 uppercase lg:tracking-[20px] tracking-[15px] text-yellow xl:text-2xl text-xl font-press2p">Projects</h3>
+      <h3 className="absolute top-16 uppercase lg:tracking-[20px] tracking-[15px] text-yellow xl:text-2xl text-xl font-press2p mx-auto w-full">Projects</h3>
       <div className="xl:w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar scrollbar-track-gray/20 scrollbar-thumb-pink/80 items-baseline justify-between gap-[6rem] px-10">
         {data?.map((project: IProject) =>(
           <div className="xl:mt-24 flex-shrink-0 xl:mb-12 snap-center flex flex-col md:flex-row xl:flex-col space-y-5 items-center justify-center py-24 max-w-[500px]" key={project.id}>
