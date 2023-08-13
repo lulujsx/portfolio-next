@@ -99,26 +99,19 @@ export default function handler(
         id: '2',
         name: 'Messenger clone',
         description: "Real-time messaging using Pusher. Message notifications and alerts. Creating and managing chat rooms and channels",
-        image: '/project_gnunoguides.png',
-        link: 'https://soyautodidacta.vercel.app/',
-        code: 'https://github.com/luanavjs/manga-app-frontend',
+        image: '/project_messenger-clone.png',
+        link: 'https://github.com/lulujsx/messenger-clone',
+        code: 'https://github.com/lulujsx/messenger-clone',
       },
       {
         id: '3',
-        name: 'Messenger clone',
-        description: "Real-time messaging using Pusher. Message notifications and alerts. Creating and managing chat rooms and channels",
-        image: '/project_gnunoguides.png',
-        link: 'https://soyautodidacta.vercel.app/',
-        code: 'https://github.com/luanavjs/manga-app-frontend', 
+        name: 'Bombo Community',
+        description: "Community app, messaging, NFT ticketing, artists and events newsletter.",
+        image: '/project_bombo.png',
+        link: 'https://wearebombo.com/',
+        code: '', 
       },
-      {
-        id: '4',
-        name: 'Messenger clone',
-        description: "Real-time messaging using Pusher. Message notifications and alerts. Creating and managing chat rooms and channels",
-        image: '/project_gnunoguides.png',
-        link: 'https://soyautodidacta.vercel.app/',
-        code: 'https://github.com/luanavjs/manga-app-frontend',
-      },
+      
 
     ]
   })
