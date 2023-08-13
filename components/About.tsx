@@ -16,7 +16,7 @@ function About({data}: Props) {
         whileInView={{opacity:1}}
         transition={{duration:1.5}}
         className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-        <h3 className="absolute top-16 uppercase tracking-[20px] text-yellow text-2xl font-press2p">About</h3>
+        <h3 className="md:absolute md:top-16 uppercase tracking-[20px] text-yellow text-2xl font-press2p">About</h3>
         <motion.img 
             src={photo}
             initial={{
@@ -39,6 +39,7 @@ function About({data}: Props) {
             <p className="text-xs md:text-sm xl:text-lg">
                 {about}
             </p>
+            <img src="https://media4.giphy.com/media/IQebREsGFRXmo/giphy.gif" alt="pokemon mew gif" className="h-[150px] ml-20 block md:hidden"/>
         </div>
     </motion.div>
   )

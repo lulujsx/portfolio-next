@@ -89,7 +89,7 @@ export default function handler(
       {
         id: '0',
         name: 'Guides UNO',
-        description: "This is a project promoted by GNUno, which consists of a set of 'study plans' of different technologies for someone who is just starting out has a path to follow, together with resources such as videos, tutorials and recommended bibliography.",
+        description: "This is a project promoted by GNUno, study plans as roadmaps with videos, tutorials and recommended bibliography.",
         image: '/project_gnunoguides.png',
         alt: 'college project 1 - roadmaps',
         link: 'https://autodidactauno.vercel.app/',
