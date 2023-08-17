@@ -55,9 +55,9 @@ export default function Home() {
       <section id="projects" className="snap-start">
         <Projects data={data.projects}/>
       </section>
-      <section id="contact" className="snap-start">
+      {/* <section id="contact" className="snap-start">
         <ContactMe/>
-      </section>
+      </section> */}
       <Link href="#hero">
         <footer className="hidden sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">

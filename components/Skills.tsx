@@ -13,23 +13,26 @@ export default function Skills({data}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex flex-col relative text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen xl:space-y-0 mx-auto items-center justify-center"
+      className="text-center h-screen mx-auto"
     >
-      <h3 className="absolute top-10 md:top-16 uppercase text-yellow tracking-[20px] text-xl md:text-2xl font-press2p">
+      <h2 className="uppercase text-yellow tracking-[20px] text-xl md:text-2xl font-press2p pt-5 xl:pt-10">
         Skills
-      </h3>
+      </h2>
 
-      <h3 className="hidden md:block absolute top-28 uppercase tracking-[3px] text-pink text-xs xl:text-lg xl:mt-7 xl:mb-20">
-        Technologies i&apos;ve been using
-      </h3>
+      <div className="flex flex-col">
+        <h3 className="hidden md:block uppercase tracking-[3px] text-pink text-xs xl:text-lg xl:mt-7 xl:mb-20">
+          Technologies i&apos;ve been using
+        </h3>
 
-      <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-5 xl:gap-9 mt-14 md:mt-9 xl:mt-0 justify-center mx-auto">
-        {data?.map((skill: ISkill) => (
-          <div className="flex justify-center items-center" key={skill.id}>
-            <Skill skill={skill}/>
-          </div>
-        ))}
+        <div className="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-6 gap-5 xl:gap-9 mt-14 md:mt-9 xl:mt-0 justify-center mx-auto">
+          {data?.map((skill: ISkill) => (
+            <div className="flex justify-center items-center" key={skill.id}>
+              <Skill skill={skill}/>
+            </div>
+          ))}
+        </div>
       </div>
+
     </motion.div>
   );
 }

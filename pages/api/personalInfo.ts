@@ -21,7 +21,7 @@ export default function handler(
     name: 'Luana Vallejos',
     tags: ['FullStack Developer, UI Designer, STEM Student'],
     photo: 'https://i.pinimg.com/564x/af/38/3f/af383f48f2d3ea0ae5bd7b505d22c2c9.jpg',
-    about: "I'm from Buenos Aires, Argentina. I study Computer Science B.Sc. at Universidad Nacional Del Oeste. Passionate about web, design, problem solving and everything related to computing. During my last job, I have gained valuable experience working as a frontend developer with a focus on the React ecosystem. I am eager to continue growing as a fullstack developer, exploring new technologies, taking new challanges and delivering exceptional user experiences. In my free time, I love watching Horror movies, read manga and listen to music.",
+    about: "I am a software developer based in Buenos Aires, Argentina, who is passionate about modern technologies and creative ways of solving problems. In addition to fullstack web development I love experimenting with mobile apps, UI/UX, and modern tech stacks and software architectures.",
     experience: [
       {
         id: '0',

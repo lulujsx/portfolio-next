@@ -45,13 +45,13 @@ export default function ContactMe({}: Props) {
             viewport={{once:true}}
             className="flex flex-row items-center gap-5 text-pink md:ml-7 xl:ml-0">
             <a href="https://github.com/lulujsx" target="_blank">
-                <AiFillGithub className="text-7xl xl:text-7xl"/>
+                <AiFillGithub className="text-xl xl:text-7xl"/>
             </a>
             <a href="https://www.linkedin.com/in/luanavallejos/" target="_blank">
-                <FaLinkedin className="text-7xl xl:text-7xl"/>
+                <FaLinkedin className="text-xl xl:text-7xl"/>
             </a>
             <a href="mailto:luanalorenavallejos@gmail.com" target="_blank">
-                <AiOutlineMail className="text-7xl xl:text-7xl"/>
+                <AiOutlineMail className="text-xl xl:text-7xl"/>
             </a>
         </motion.div>
     </div>
