@@ -13,9 +13,9 @@ export default function Skills({data}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="text-center h-screen mx-auto"
+      className="text-center mx-auto xl:mb-28 mb-10"
     >
-      <h2 className="uppercase text-yellow tracking-[20px] text-xl md:text-2xl font-press2p pt-5 xl:pt-10">
+      <h2 className="uppercase text-yellow tracking-[20px] text-xl md:text-2xl font-press2p mt-5">
         Skills
       </h2>
 

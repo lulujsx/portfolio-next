@@ -18,9 +18,9 @@ function About({data}: Props) {
         initial={{opacity:0}} 
         whileInView={{opacity:1}}
         transition={{duration:1.5}}
-        className="h-screen flex flex-col text-center md:text-left">
+        className="flex flex-col text-center md:text-left xl:mb-28 mb-10">
         <h2 className="uppercase tracking-[20px] text-yellow text-2xl font-press2p text-center my-5 xl:mt-10">About</h2>
-        <div className="flex max-w-7xl px-10 justify-evenly mx-auto items-center xl:px-20">
+        <div className="flex px-10 justify-evenly mx-auto items-center xl:px-20">
             <motion.img 
                 src={photo}
                 initial={{
@@ -40,7 +40,7 @@ function About({data}: Props) {
                     <h4 className="text-3xl md:text-4xl font-semibold mb-3">
                         Hello, every-<span className="underline decoration-pink">nyan</span>!<span className='text-pink'> ♡</span>
                     </h4>
-                    <p className="text-xs md:text-sm xl:text-lg">
+                    <p className="text-md md:text-sm xl:text-lg">
                         {about}
                     </p>
                 <div className='flex flex-row items-center gap-5 text-pink my-3'>
@@ -54,7 +54,7 @@ function About({data}: Props) {
                         <AiOutlineMail className="text-4xl xl:text-5xl hover:text-yellow"/>
                     </a>
                 </div>
-                <img src="https://media4.giphy.com/media/IQebREsGFRXmo/giphy.gif" alt="pokemon mew gif" className="h-[150px] block md:hidden"/>
+                <img src="https://media4.giphy.com/media/IQebREsGFRXmo/giphy.gif" alt="pokemon mew gif" className="h-[100px] md:h-[150px] block md:hidden"/>
             </div>
         </div>
     </motion.div>

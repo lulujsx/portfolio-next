@@ -16,7 +16,7 @@ export default function Skill({directionLeft, skill}: Props) {
         className="flex flex-col items-center gap-4 cursor-pointer hover:animate-pulse">
         <img
             className="object-cover w-16 h-16 md:w-20 md:h-20 
-            xl:w-20 xl:h-20 filter group-hover:grayscale transition duration-300 ease-in-out"
+            xl:w-20 xl:h-20 "
             src={tech_logo}/>
         
         <h4 className="text-sm xl:text-xl">{tech_name}</h4>

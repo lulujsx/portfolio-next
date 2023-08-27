@@ -58,13 +58,12 @@ export default function Home() {
       {/* <section id="contact" className="snap-start">
         <ContactMe/>
       </section> */}
-      {/* <Link href="#hero">
-        <footer className="hidden sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-center justify-center">
-            <img className="h-10 w-10 rounded-full cursor-pointer filter grayscale hover:grayscale-0" src="https://i.imgur.com/D41Pm3w.jpg" alt="" />
+        {/* <footer>
+          <div className="my-10">
+            <p>Made with love by Lulu</p>
           </div>
-        </footer>
-      </Link> */}
+        </footer> */}
+      
     </div>
   )
 }

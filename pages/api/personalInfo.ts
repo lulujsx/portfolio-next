@@ -105,7 +105,7 @@ export default function handler(
       },
       {
         id: '3',
-        name: 'Bombo Community',
+        name: 'Bombo',
         description: "Community app, messaging, NFT ticketing, artists and events newsletter.",
         image: '/project_bombo.png',
         link: 'https://wearebombo.com/',
