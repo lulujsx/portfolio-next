@@ -39,32 +39,32 @@ export default function Home() {
       <Head>
         <title>Luana Vallejos</title>
       </Head>
-      <Header/>
-      <section id="hero" className="snap-start">
+      {/* <Header/> */}
+      <section id="hero">
         <Hero/>
       </section>
-      <section id="about" className="snap-center">
+      <section id="about">
         <About data={data}/>
       </section>
-      <section id="experience" className="snap-center">
+      <section id="experience">
         <WorkExperience data={data.experience}/>
       </section>
-      <section id="skills" className="snap-start">
+      <section id="skills">
         <Skills data={data.skills}/>
       </section>
-      <section id="projects" className="snap-start">
+      <section id="projects">
         <Projects data={data.projects}/>
       </section>
       {/* <section id="contact" className="snap-start">
         <ContactMe/>
       </section> */}
-      <Link href="#hero">
+      {/* <Link href="#hero">
         <footer className="hidden sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
             <img className="h-10 w-10 rounded-full cursor-pointer filter grayscale hover:grayscale-0" src="https://i.imgur.com/D41Pm3w.jpg" alt="" />
           </div>
         </footer>
-      </Link>
+      </Link> */}
     </div>
   )
 }

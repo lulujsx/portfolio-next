@@ -22,13 +22,13 @@ export default function Projects({data}: Props) {
         <div className="flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory scrollbar scrollbar-track-gray/20 scrollbar-thumb-pink/80 items-baseline justify-between gap-[6rem] px-10">
           {data?.map((project: IProject) =>(
             <div className="flex-shrink-0 snap-center flex flex-col md:flex-row xl:flex-col space-y-5 items-center justify-center max-w-[300px] mb-[88px] xl:mb-0" key={project.id}>
-                <div className="overflow-hidden">
+                <div className="overflow-hidden xl:h-[200px] xl:w-[350px] h-52 w-72">
                   <Link href={project.link} target="_blank">
                     <Image
                       src={project.image}
                       width={600}
                       height={600}
-                      className="rounded-xl xl:h-[200px] xl:w-[350px] h-52 w-72 object-cover cursor-pointer" alt="project image" />
+                      className="rounded-xl object-cover cursor-pointer w-[100%] h-[100%] hover:scale-[120%] hover:rounded-xl" alt="project image" />
                   </Link>
                 </div>
                   <div className="flex flex-col items-center
