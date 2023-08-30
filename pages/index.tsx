@@ -40,19 +40,19 @@ export default function Home() {
         <title>Luana Vallejos</title>
       </Head>
       {/* <Header/> */}
-      <section id="hero" className='snap-start'>
+      <section id="hero">
         <Hero/>
       </section>
-      <section id="about" className='snap-start'>
+      <section id="about">
         <About data={data}/>
       </section>
-      <section id="experience" className='snap-start'>
+      <section id="experience">
         <WorkExperience data={data.experience}/>
       </section>
-      <section id="skills" className='snap-center'>
+      <section id="skills">
         <Skills data={data.skills}/>
       </section>
-      <section id="projects" className='snap-start'>
+      <section id="projects">
         <Projects data={data.projects}/>
       </section>
       {/* <section id="contact" className="snap-start">
