@@ -40,7 +40,7 @@ function About({data}: Props) {
                     <h4 className="text-3xl md:text-4xl font-semibold mb-3">
                         Hello, every-<span className="underline decoration-pink">nyan</span>!<span className='text-pink'> ♡</span>
                     </h4>
-                    <p className="text-md md:text-sm xl:text-lg">
+                    <p className="text-sm xl:text-lg">
                         {about}
                     </p>
                 <div className='flex flex-row items-center gap-5 text-pink my-3'>
