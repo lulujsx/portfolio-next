@@ -21,7 +21,7 @@ export default function handler(
     name: 'Luana Vallejos',
     tags: ['FullStack Developer, UI Designer, STEM Student'],
     photo: 'https://i.pinimg.com/564x/af/38/3f/af383f48f2d3ea0ae5bd7b505d22c2c9.jpg',
-    about: "I am a software developer based in Buenos Aires, Argentina, who is passionate about modern technologies and creative ways of solving problems. In addition to fullstack web development I love experimenting with mobile apps, UI/UX, and modern tech stacks and software architectures.",
+    about: "My name is Luana, and I'm a 26 y.o. who loves coding! I grew up with a computer for as long as I can remember. I really enjoyed surfing the web, playing flash games, and using all the social networks that existed. I made my first webpage in 2008! It was about my dog and used a website builder that allowed personalization with static HTML and CSS. All my life I felt comfortable using software for study, art, work and doing anything I set my mind to, that is why I'm so passionate about  ♡ technology ♡  I also love the entire process of creating my own apps, handling client-side and server-side development, working with databases, and deploying them. I often find myself treating my developer journey more like a scrapbook adventure than a structured plan. My current goal is to become a cross-platform mobile developer and learn all about UI design.",
     experience: [
       {
         id: '0',
