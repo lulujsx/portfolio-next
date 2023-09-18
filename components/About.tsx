@@ -43,7 +43,7 @@ function About({data}: Props) {
                     <p className="text-sm xl:text-lg">
                         {about}
                     </p>
-                <div className='flex flex-row items-center gap-5 text-pink my-3'>
+                <div className='flex flex-row items-center gap-5 text-pink my-7'>
                     <a href="https://github.com/lulujsx" target="_blank">
                         <AiFillGithub className="text-4xl xl:text-5xl hover:text-yellow"/>
                     </a>
