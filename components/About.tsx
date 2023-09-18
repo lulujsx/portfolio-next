@@ -45,13 +45,13 @@ function About({data}: Props) {
                     </p>
                 <div className='flex flex-row items-center gap-5 text-pink my-7'>
                     <a href="https://github.com/lulujsx" target="_blank">
-                        <AiFillGithub className="text-4xl xl:text-5xl hover:text-yellow"/>
+                        <AiFillGithub className="text-4xl xl:text-5xl hover:text-yellow hover:animate-bounce"/>
                     </a>
                     <a href="https://www.linkedin.com/in/luanavallejos/" target="_blank">
-                        <FaLinkedin className="text-4xl xl:text-5xl hover:text-yellow"/>
+                        <FaLinkedin className="text-4xl xl:text-5xl hover:text-yellow hover:animate-bounce"/>
                     </a>
                     <a href="mailto:luanalorenavallejos@gmail.com" target="_blank">
-                        <AiOutlineMail className="text-4xl xl:text-5xl hover:text-yellow"/>
+                        <AiOutlineMail className="text-4xl xl:text-5xl hover:text-yellow hover:animate-bounce"/>
                     </a>
                 </div>
                 <img src="https://media4.giphy.com/media/IQebREsGFRXmo/giphy.gif" alt="pokemon mew gif" className="h-[100px] md:h-[150px] block md:hidden"/>
