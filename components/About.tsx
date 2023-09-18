@@ -40,8 +40,8 @@ function About({data}: Props) {
                     <h4 className="text-3xl md:text-4xl font-semibold mb-3">
                         Hello, every-<span className="underline decoration-pink">nyan</span>!<span className='text-pink'> ♡</span>
                     </h4>
-                    <p className="text-sm xl:text-lg">
-                        {about}
+                    <p className="text-sm xl:text-lg" dangerouslySetInnerHTML={{ __html: about }}>
+                       
                     </p>
                 <div className='flex flex-row items-center gap-5 text-pink my-7'>
                     <a href="https://github.com/lulujsx" target="_blank">

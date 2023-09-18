@@ -5,10 +5,12 @@
 // import {SiLetterboxd} from "react-icons/si"
 // import {motion} from "framer-motion"
 
-// type Props = {
+type Props = {
 
-// }
-
+}
+export default function ContactMe({}: Props){
+    
+}
 // export default function ContactMe({}: Props) {
 
 
