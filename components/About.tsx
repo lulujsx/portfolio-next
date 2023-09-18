@@ -20,7 +20,7 @@ function About({data}: Props) {
         transition={{duration:1.5}}
         className="flex flex-col text-center md:text-left xl:mb-28 mb-10">
         <h2 className="uppercase tracking-[20px] text-yellow text-2xl font-press2p text-center my-5 xl:mt-10">About</h2>
-        <div className="flex px-10 justify-evenly mx-auto items-center xl:px-20">
+        <div className="flex px-10 justify-evenly mx-auto items-center xl:px-52">
             <motion.img 
                 src={photo}
                 initial={{
