@@ -20,8 +20,8 @@ export default function Hero({}: Props) {
         />
         <div className="z-20">
             <h2 className="text-sm uppercase text-yellow pb-2 tracking-[15px]">Software Developer</h2>
-            <h1 className="text-5xl lg:text-6xl font-semibold">
-                <span className="mr-3 text-sm xl:text-2xl">{text}</span>
+            <h1 className="font-semibold">
+                <span className="text-3xl xl:text-5xl">{text}</span>
                 <Cursor cursorColor="#d14888"/>
             </h1>
 
