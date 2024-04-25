@@ -41,7 +41,6 @@ function About({data}: Props) {
                         Hello, every-<span className="underline decoration-pink">nyan</span>!<span className='text-pink'> ♡</span>
                     </h4>
                     <p className="text-sm xl:text-lg" dangerouslySetInnerHTML={{ __html: about }}>
-                       
                     </p>
                 <div className='flex flex-row items-center gap-5 text-pink my-7'>
                     <a href="https://github.com/lulujsx" target="_blank">
