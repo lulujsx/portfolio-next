@@ -1,7 +1,8 @@
+'use client'
+
 import React from 'react'
 import { IProject } from '../types/IResponse'
 import Link from "next/link"
-import Image from 'next/image'
 import {motion} from "framer-motion"
 
 type Props = {
