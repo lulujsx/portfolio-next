@@ -1,41 +1,54 @@
-import About from '../components/About'
-import Hero from '../components/Hero'
+import CommandLine from '../components/CommandLine'
+import Education from '../components/Education'
+import Experience from '../components/Experience'
+import Hobbies from '../components/Hobbies'
 import Projects from '../components/Projects'
-import Skills from '../components/Skills'
-import WorkExperience from '../components/WorkExperience'
+import Stack from '../components/Stack'
+import TerminalSection from '../components/TerminalSection'
+import TerminalWindow from '../components/TerminalWindow'
+import Whoami from '../components/Whoami'
 import { getPersonalInfo } from '../lib/personalInfo'
 
+const sections = [
+  { id: 'whoami', label: 'whoami' },
+  { id: 'stack', label: 'stack' },
+  { id: 'experience', label: 'experience' },
+  { id: 'projects', label: 'projects' },
+  { id: 'education', label: 'education' },
+]
+
 export default function Home() {
-  const data = getPersonalInfo()
+  const { terminal, profile, stack, experience, projects, education, hobbies } = getPersonalInfo()
 
   return (
-    <div className=" bg-black text-white h-screen snap-y snap-mandatory overflow-y-scroll
-    overflow-x-hidden z-0 scrollbar scrollbar-track-gray/20 scrollbar-thumb-pink/80">
-      {/* <Header/> */}
-      <section id="hero">
-        <Hero/>
-      </section>
-      <section id="about">
-        <About data={data}/>
-      </section>
-      <section id="experience">
-        <WorkExperience data={data.experience}/>
-      </section>
-      <section id="skills">
-        <Skills data={data.skills}/>
-      </section>
-      <section id="projects">
-        <Projects data={data.projects}/>
-      </section>
-      {/* <section id="contact" className="snap-start">
-        <ContactMe/>
-      </section> */}
-        {/* <footer>
-          <div className="my-10">
-            <p>Made with love by Lulu</p>
-          </div>
-        </footer> */}
+    <main className="mx-auto w-full max-w-4xl px-3 py-6 sm:px-6 sm:py-10 lg:py-14">
+      <TerminalWindow terminal={terminal} sections={sections}>
+        <TerminalSection id="whoami" terminal={terminal} command="whoami">
+          <Whoami profile={profile} />
+        </TerminalSection>
 
-    </div>
+        <TerminalSection id="stack" terminal={terminal} command="cat stack.conf">
+          <Stack data={stack} />
+        </TerminalSection>
+
+        <TerminalSection id="experience" terminal={terminal} command="cat experience.log">
+          <Experience data={experience} />
+        </TerminalSection>
+
+        <TerminalSection id="projects" terminal={terminal} command="ls projects/">
+          <Projects data={projects} />
+        </TerminalSection>
+
+        <TerminalSection id="education" terminal={terminal} command="cat education.txt">
+          <Education data={education} />
+        </TerminalSection>
+
+        <TerminalSection id="hobbies" terminal={terminal} command="cat hobbies.txt">
+          <Hobbies data={hobbies} />
+        </TerminalSection>
+
+        <CommandLine terminal={terminal} caret />
+      </TerminalWindow>
+    </main>
   )
 }

@@ -1,29 +1,110 @@
 @import "tailwindcss";
-@plugin "tailwind-scrollbar";
 
 @theme {
   --color-*: initial;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-pink: #d14888;
-  --color-lightpink: #FB9DC6;
-  --color-gray: #838284;
-  --color-yellow: #FFE175;
+  --color-bg: #07070a;
+  --color-panel: #101013;
+  --color-bar: #17171b;
+  --color-line: #26262c;
+  --color-fg: #e7e7ea;
+  --color-muted: #9a9aa3;
+  --color-dim: #6a6a73;
+  --color-pink: #e8578f;
+  --color-red: #ff5f57;
+  --color-amber: #febc2e;
+  --color-green: #28c840;
 }
 
 @theme inline {
-  --font-press2p: var(--font-press2p);
-  --font-open: var(--font-open);
+  --font-mono: var(--font-jetbrains);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-pink) 35%, transparent);
+  color: var(--color-white);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-line);
+  border: 2px solid var(--color-bg);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: color-mix(in srgb, var(--color-pink) 70%, transparent);
+}
+
+@keyframes caret-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @layer components {
-  .heroButton {
-    @apply px-6 py-2 border border-black rounded-full uppercase text-xs tracking-widest text-gray transition-all hover:text-pink hover:border-pink;
+  .caret {
+    @apply inline-block h-[1.05em] w-[0.55em] translate-y-[0.1em] bg-pink;
+    animation: caret-blink 1.1s step-end infinite;
   }
-  .linkButton {
-    @apply px-6 py-2 border rounded-full uppercase text-xs tracking-widest transition-all text-pink border-pink hover:text-yellow hover:border-yellow;
+
+  .terminalLink {
+    @apply text-fg underline decoration-line decoration-dotted underline-offset-4 transition-colors hover:text-pink hover:decoration-pink;
   }
-  .contactInput {
-    @apply outline-none bg-[#808080]/30 rounded-sm border-b px-6 py-4 border-pink/40 text-white placeholder-gray transition-all focus:border-pink;
+
+  .tag {
+    @apply rounded-sm border border-pink/40 bg-pink/10 px-1.5 py-0.5 text-[10px] tracking-wide text-pink;
+  }
+}
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.45s ease-out,
+    transform 0.45s ease-out;
+}
+
+[data-reveal='shown'] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .caret {
+    animation: none;
+  }
+
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }

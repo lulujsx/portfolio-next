@@ -1,30 +1,24 @@
 import type { Metadata } from 'next'
-import { Press_Start_2P, Open_Sans } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const press2p = Press_Start_2P({
-  weight: '400',
-  variable: '--font-press2p',
-  preload: false
-})
-
-const open_sans = Open_Sans({
-  weight: ['300', '500'],
-  variable: '--font-open',
+const jetbrains = JetBrains_Mono({
+  weight: ['400', '500', '700'],
+  variable: '--font-jetbrains',
   subsets: ['latin'],
   display: 'swap',
 })
 
 export const metadata: Metadata = {
-  title: 'Luana Vallejos',
+  title: 'Luana Vallejos — Front End & Mobile Developer',
+  description:
+    'Front End & Mobile Developer building user-facing web and mobile applications with React, Next.js and Flutter.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${press2p.variable} font-press2p ${open_sans.variable} font-open`}>
-        {children}
-      </body>
+      <body className={`${jetbrains.variable} bg-bg font-mono text-fg antialiased`}>{children}</body>
     </html>
   )
 }

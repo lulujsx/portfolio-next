@@ -1,125 +1,127 @@
-import { IResponse } from '../types/IResponse'
+import { Portfolio } from '../types/portfolio'
 
-export const personalInfo: IResponse = {
-  name: 'Luana Vallejos',
-  tags: 'FullStack Developer, UI Designer, STEM Student',
-  photo: 'https://i.pinimg.com/564x/af/38/3f/af383f48f2d3ea0ae5bd7b505d22c2c9.jpg',
-  about: "My name is Luana, and I'm a 26 y.o. who loves coding! I grew up with a computer for as long as I can remember. I really enjoyed surfing the web, playing flash games, and using all the social networks that existed. I made my first webpage in 2008! It was about my dog and used a website builder that allowed personalization with static HTML and CSS. All my life I felt comfortable using software for study, art, work and doing anything I set my mind to, that is why I'm so passionate about  <span class='text-yellow'>♡ technology ♡</span> I also love the entire process of creating my own apps, handling client-side and server-side development, working with databases, and deploying them. I often find myself treating my developer journey more like a scrapbook adventure than a structured plan. My current goal is to become a cross-platform mobile developer and learn all about UI design.",
-  experience: [
+export const personalInfo: Portfolio = {
+  terminal: {
+    user: 'luana',
+    host: 'portfolio',
+  },
+  profile: {
+    name: 'Luana Vallejos',
+    role: 'Front End & Mobile Developer',
+    location: 'Argentina',
+    email: 'luanalorenavallejos@gmail.com',
+    github: 'github.com/lulujsx',
+    linkedin: 'linkedin.com/in/luanavallejos',
+    intro:
+      'Front End & Mobile Developer building user-facing applications for web and mobile. I work close to design and product, turning interfaces into accessible, responsive and maintainable code with React, Next.js and Flutter. Computer Science student at Universidad Nacional del Oeste.',
+  },
+  stack: [
     {
-      id: '0',
-      company: 'Shalion',
-      position: 'JavaScript Developer',
-      date_start: 'March 2024',
-      date_end: 'Present',
-      technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg','https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg','https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'],
-      description: "Development and maintenance of JavaScript templates to do web scraping to accurately and efficiently extract data on eCommerce sites."
+      id: 'frontend',
+      label: 'frontend',
+      items: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Material UI', 'Tailwind CSS'],
     },
     {
-      id: '2',
-      company: 'PochitamaDevs',
-      position: 'FrontEnd Developer',
-      date_start: 'August 2023',
-      date_end: 'February 2024',
-      technologies: [],
-      description: 'I joined a project to build a hybrid mobile application and web using React and Ionic components.'
+      id: 'mobile',
+      label: 'mobile',
+      items: ['Flutter', 'Dart', 'React Native', 'Expo'],
     },
     {
-      id: '3',
-      company: 'InfinixSoft',
-      position: 'React Developer',
-      date_start: 'March 2022',
-      date_end: 'April 2023',
-      technologies: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg','https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg','https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg'],
-      description: "Developing and maintaining the user interface. Optimizing the user experience. Implementing responsive design on mobile websites. Integration with APIs and databases."
+      id: 'backend-data',
+      label: 'backend & data',
+      items: ['Node.js', 'REST APIs', 'SQL', 'Snowflake'],
+    },
+    {
+      id: 'tools',
+      label: 'tools',
+      items: ['Git', 'GitHub', 'GitLab', 'Docker', 'Figma'],
+    },
+    {
+      id: 'testing',
+      label: 'testing & automation',
+      items: ['Playwright'],
     },
   ],
-  skills: [
+  experience: [
     {
-      id: '0',
-      tech_name: 'ReactJS',
-      tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+      id: 'tecso',
+      position: 'Front End & Mobile Developer',
+      company: 'Tecso',
+      date_start: 'Dec 2024',
+      date_end: 'Present',
+      badges: ['current'],
+      highlights: [
+        'Development and maintenance of **Skyloop**, a drone operations platform.',
+        'Building web and mobile interfaces, integrating APIs and shipping new features in collaboration with design, backend and QA teams.',
+      ],
+      technologies: ['React', 'TypeScript', 'Flutter', 'Dart', 'Material UI', 'REST APIs', 'Git', 'Docker'],
     },
     {
-      id: '1',
-      tech_name: 'NextJS',
-      tech_logo: 'https://i.imgur.com/2zLQtbE.png',
+      id: 'shalion',
+      position: 'Automation Developer',
+      company: 'Shalion',
+      date_start: 'Mar 2024',
+      date_end: 'Nov 2024',
+      badges: [],
+      highlights: [
+        'Developed web scraping and automation solutions for e-commerce, focused on data extraction, processing and validation.',
+        'Built scrapers for dynamic websites and ran quality checks to ensure reliable data.',
+      ],
+      technologies: ['Node.js', 'Playwright', 'JavaScript', 'SQL', 'Snowflake', 'Google Sheets'],
     },
     {
-      id: '1.2',
-      tech_name: 'React Native',
-      tech_logo: 'https://cdn.worldvectorlogo.com/logos/react-native-1.svg',
+      id: 'infinixsoft',
+      position: 'React Developer',
+      company: 'InfinixSoft',
+      date_start: 'Mar 2022',
+      date_end: 'Mar 2023',
+      badges: [],
+      highlights: [
+        'Developed and maintained responsive web interfaces, building reusable components and integrating APIs.',
+        'Ensured a consistent user experience across devices and screen sizes.',
+      ],
+      technologies: ['React', 'Next.js', 'JavaScript', 'Git', 'REST APIs'],
     },
-    {
-      id: '1.3',
-      tech_name: 'Android Studio',
-      tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg',
-    },
-    {
-      id: '2',
-      tech_name: 'NodeJS',
-      tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-    },
-    {
-      id: '3',
-      tech_name: 'Express',
-      tech_logo: 'https://i.imgur.com/pRtyttv.png',
-    },
-    {
-      id: '4',
-      tech_name: 'TypeScript',
-      tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-    },
-    {
-      id: '5',
-      tech_name: 'JavaScript',
-      tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
-    },
-    {
-      id: '6',
-      tech_name: 'Playwright',
-      tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg',
-    },
-    {
-      id: '6.2',
-      tech_name: 'Firebase',
-      tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg',
-    },
-    {
-      id: '7',
-      tech_name: 'MongoDB',
-      tech_logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
-    },
-
   ],
   projects: [
     {
-      id: '0',
+      id: 'links-uno',
       name: 'Links UNO',
-      description: "Our website centralizes useful resources for Computer Science students at the National University of the West (UNO). Includes links to communication groups, Discord study material, YouTube channels with tutorials, and more.",
-      image: '/project_links.png',
+      description:
+        'Hub that centralizes useful resources for Computer Science students at Universidad Nacional del Oeste: communication groups, study material, tutorials and more.',
+      technologies: ['Next.js', 'React', 'JavaScript', 'Tailwind CSS'],
       link: 'https://ntrs-links.vercel.app/',
       code: 'https://github.com/NTRS-UNO/ntrs-links',
     },
     {
-      id: '2',
+      id: 'messenger-clone',
       name: 'Messenger clone',
-      description: "Real-time messaging using Pusher. Message notifications and alerts. Creating and managing chat rooms and channels",
-      image: '/project_messenger-clone.png',
+      description:
+        'Real-time messaging app with message notifications and alerts, plus creation and management of chat rooms and channels.',
+      technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Prisma', 'NextAuth'],
       link: 'https://github.com/lulujsx/messenger-clone',
       code: 'https://github.com/lulujsx/messenger-clone',
     },
     {
-      id: '3',
+      id: 'bombo',
       name: 'Bombo',
-      description: "Community app, messaging, NFT ticketing, artists and events newsletter.",
-      image: '/project_bombo.png',
+      description: 'Community app with messaging, NFT ticketing and an artists and events newsletter.',
+      technologies: [],
       link: 'https://wearebombo.com/',
       code: '',
     },
-  ]
+  ],
+  education: [
+    {
+      id: 'uno',
+      title: 'Computer Science',
+      institution: 'Universidad Nacional del Oeste (UNO)',
+      meta: ['Buenos Aires, Argentina', 'in progress'],
+    },
+  ],
+  hobbies: ['music', 'cinema', 'gaming', 'learning new things'],
 }
 
-export function getPersonalInfo(): IResponse {
+export function getPersonalInfo(): Portfolio {
   return personalInfo
 }

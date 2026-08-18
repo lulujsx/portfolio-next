@@ -1,46 +1,51 @@
-'use client'
-
-import React from 'react'
-import { IProject } from '../types/IResponse'
-import Link from "next/link"
-import {motion} from "framer-motion"
+import DotList from './DotList'
+import { Project } from '../types/portfolio'
 
 type Props = {
-  data: IProject[]
+  data: Project[]
 }
 
-export default function Projects({data}: Props) {
-  
+export default function Projects({ data }: Props) {
   return (
-    <motion.div
-      initial={{opacity:0}}
-      whileInView={{opacity:1}}
-      transition={{duration: 1.5}}
-      className="flex flex-col text-center mx-auto mb-28"
-    >
-      <h3 className="uppercase lg:tracking-[20px] tracking-[15px] text-yellow xl:text-2xl text-xl font-press2p my-5">Projects</h3>
-      <div className='flex justify-center flex-wrap gap-9 xl:mt-16 mt-10'>
-          {data?.map((project: IProject) =>(
-            <div className="flex flex-col sm:w-[350px] px-10 xl:pb-16" key={project.id}>
-                  <Link href={project.link} target="_blank" className="overflow-hidden hover:rounded-xl rounded-xl mb-3" >
-                    <img
-                      src={project.image}
-                      className="h-[160px] rounded-xl object-cover cursor-pointer w-[100%] transition-[0.5s] hover:scale-[120%] hover:rounded-xl" alt="project image" />
-                  </Link>
-                  <div className="flex flex-col items-center ">
-                    <h4 className="text-base md:text-xl xl:text-3xl font-semibold text-center">{project.name}</h4>
-                    <div className="px-2 md:-p-10">
-                      <p className='text-xs md:text-base xl:text-sm'>{project.description}</p>
-                      <Link href={project.link} target="_blank">
-                        <button className='linkButton mt-4 '>Link</button>
-                      </Link>
-                    </div>  
-                  </div>
+    <ul className="space-y-3">
+      {data.map((project) => {
+        const hasLive = Boolean(project.link) && project.link !== project.code
+
+        return (
+          <li
+            key={project.id}
+            className="rounded-md border border-line bg-bar/40 p-4 transition-colors hover:border-pink/40"
+          >
+            <div className="flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+              <h3 className="flex items-center gap-2 text-[13px] font-medium text-fg sm:text-sm">
+                <span className="text-pink" aria-hidden>
+                  ▸
+                </span>
+                {project.name}
+              </h3>
+
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
+                {hasLive ? (
+                  <a href={project.link} target="_blank" rel="noreferrer" className="terminalLink">
+                    [live]
+                  </a>
+                ) : null}
+                {project.code ? (
+                  <a href={project.code} target="_blank" rel="noreferrer" className="terminalLink">
+                    [code]
+                  </a>
+                ) : null}
+              </div>
             </div>
-          ))}
-        
-      </div>
-      {/* <div className="w-full absolute  bg-pink/40  h-[500px] "/> */}
-    </motion.div>
+
+            <p className="mt-2 max-w-[72ch] text-[13px] leading-relaxed text-muted">{project.description}</p>
+
+            {project.technologies.length > 0 ? (
+              <DotList items={project.technologies} className="mt-2.5 text-xs text-dim" />
+            ) : null}
+          </li>
+        )
+      })}
+    </ul>
   )
 }
