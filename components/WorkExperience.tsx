@@ -1,7 +1,9 @@
-import React, {useState, useEffect} from 'react'
+'use client'
+
+import React from 'react'
 import ExperienceCard from './ExperienceCard'
 import { motion } from "framer-motion"
-import { IExperience, IResponse } from '../types/IResponse'
+import { IExperience } from '../types/IResponse'
 
 type Props = {
   data: IExperience[] 

@@ -1,3 +1,5 @@
+'use client'
+
 import {AiFillGithub} from "react-icons/ai"
 import {AiOutlineMail} from "react-icons/ai"
 import {FaLinkedin} from "react-icons/fa"

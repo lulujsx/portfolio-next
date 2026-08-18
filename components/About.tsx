@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import {motion} from "framer-motion"
 import {AiFillGithub} from "react-icons/ai"
@@ -36,7 +38,7 @@ function About({data}: Props) {
                 viewport={{once:true}}
                 className="hidden md:block w-56 h-56 object-cover rounded-full md:rounded-lg md:w-64 md:h-95 xl:w-96 xl:h-96"
             />
-            <div className="md:px-10 max-w-3 break-words flex flex-col items-center xl:items-start">
+            <div className="md:px-10 break-words flex flex-col items-center xl:items-start">
                     <h4 className="text-3xl md:text-4xl font-semibold mb-3">
                         Hello, every-<span className="underline decoration-pink">nyan</span>!<span className='text-pink'> ♡</span>
                     </h4>
