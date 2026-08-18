@@ -29,4 +29,4 @@ lib/            personalInfo.ts — all portfolio content lives here
 types/          Content model shared by the components
 ```
 
-All the content (profile, stack, experience, projects, education, hobbies) is edited in `lib/personalInfo.ts`; the components render whatever that file exports. Theme colors and terminal effects are defined in `app/globals.css`.
+All the content (profile, stack, experience, projects, education) is edited in `lib/personalInfo.ts`; the components render whatever that file exports. Theme colors and terminal effects are defined in `app/globals.css`.

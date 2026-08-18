@@ -1,15 +1,15 @@
-import { Profile } from '../types/portfolio'
+import { Profile, UiCopy } from '../types/portfolio'
 
 type Props = {
   profile: Profile
+  labels: UiCopy
 }
 
-export default function Whoami({ profile }: Props) {
+export default function Whoami({ profile, labels }: Props) {
   const rows = [
-    { label: 'location', value: profile.location },
-    { label: 'email', value: profile.email, href: `mailto:${profile.email}` },
-    { label: 'github', value: profile.github, href: `https://${profile.github}` },
-    { label: 'linkedin', value: profile.linkedin, href: `https://${profile.linkedin}` },
+    { label: labels.location, value: profile.location },
+    { label: labels.github, value: profile.github, href: `https://${profile.github}` },
+    { label: labels.linkedin, value: profile.linkedin, href: `https://${profile.linkedin}` },
   ]
 
   return (

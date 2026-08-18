@@ -1,12 +1,13 @@
 import DotList from './DotList'
 import Emphasis from './Emphasis'
-import { Experience as ExperienceItem } from '../types/portfolio'
+import { Experience as ExperienceItem, UiCopy } from '../types/portfolio'
 
 type Props = {
   data: ExperienceItem[]
+  labels: UiCopy
 }
 
-export default function Experience({ data }: Props) {
+export default function Experience({ data, labels }: Props) {
   return (
     <ol className="space-y-7">
       {data.map((job) => (
@@ -15,7 +16,7 @@ export default function Experience({ data }: Props) {
             <h3 className="text-[13px] font-medium text-pink sm:text-sm">{job.position}</h3>
             {job.badges.map((badge) => (
               <span key={badge} className="tag">
-                {badge}
+                {labels[badge]}
               </span>
             ))}
           </div>
@@ -44,7 +45,7 @@ export default function Experience({ data }: Props) {
           </ul>
 
           <div className="mt-3 grid gap-x-4 gap-y-1 text-xs sm:grid-cols-[3.5rem_minmax(0,1fr)]">
-            <span className="text-dim">tech</span>
+            <span className="text-dim">{labels.tech}</span>
             <DotList items={job.technologies} className="text-muted" />
           </div>
         </li>

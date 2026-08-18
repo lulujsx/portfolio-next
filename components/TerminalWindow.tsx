@@ -1,12 +1,22 @@
-import { TerminalIdentity } from '../types/portfolio'
+import { Locale, TerminalIdentity, UiCopy } from '../types/portfolio'
 
 type Props = {
   terminal: TerminalIdentity
   sections: { id: string; label: string }[]
+  locale: Locale
+  labels: UiCopy
+  onToggleLocale: () => void
   children: React.ReactNode
 }
 
-export default function TerminalWindow({ terminal, sections, children }: Props) {
+export default function TerminalWindow({
+  terminal,
+  sections,
+  locale,
+  labels,
+  onToggleLocale,
+  children,
+}: Props) {
   const title = `${terminal.user}@${terminal.host}: ~`
 
   return (
@@ -30,8 +40,8 @@ export default function TerminalWindow({ terminal, sections, children }: Props) 
             +
           </span>
 
-          <div className="ml-auto flex items-center gap-4">
-            <nav aria-label="Sections" className="hidden items-center gap-4 text-xs md:flex">
+          <div className="ml-auto flex items-center gap-3 sm:gap-4">
+            <nav aria-label={labels.sections} className="hidden items-center gap-4 text-xs md:flex">
               {sections.map((section) => (
                 <a
                   key={section.id}
@@ -43,6 +53,20 @@ export default function TerminalWindow({ terminal, sections, children }: Props) 
               ))}
             </nav>
 
+            <button
+              type="button"
+              onClick={onToggleLocale}
+              aria-label={labels.switchLanguage}
+              title={labels.switchLanguage}
+              className="flex items-center gap-1 rounded-sm border border-line px-1.5 py-0.5 text-[11px] tracking-wide transition-colors hover:border-pink/50"
+            >
+              <span className={locale === 'en' ? 'text-pink' : 'text-dim'}>EN</span>
+              <span className="text-dim" aria-hidden>
+                /
+              </span>
+              <span className={locale === 'es' ? 'text-pink' : 'text-dim'}>ES</span>
+            </button>
+
             <div className="flex shrink-0 items-center gap-3 text-xs text-dim" aria-hidden>
               <span>–</span>
               <span>□</span>
@@ -52,7 +76,7 @@ export default function TerminalWindow({ terminal, sections, children }: Props) 
         </div>
 
         <nav
-          aria-label="Sections"
+          aria-label={labels.sections}
           className="flex gap-4 overflow-x-auto border-t border-line px-3 pb-2 pt-1.5 text-[11px] md:hidden"
         >
           {sections.map((section) => (

@@ -1,11 +1,12 @@
 import DotList from './DotList'
-import { Project } from '../types/portfolio'
+import { Project, UiCopy } from '../types/portfolio'
 
 type Props = {
   data: Project[]
+  labels: UiCopy
 }
 
-export default function Projects({ data }: Props) {
+export default function Projects({ data, labels }: Props) {
   return (
     <ul className="space-y-3">
       {data.map((project) => {
@@ -27,12 +28,12 @@ export default function Projects({ data }: Props) {
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
                 {hasLive ? (
                   <a href={project.link} target="_blank" rel="noreferrer" className="terminalLink">
-                    [live]
+                    [{labels.live}]
                   </a>
                 ) : null}
                 {project.code ? (
                   <a href={project.code} target="_blank" rel="noreferrer" className="terminalLink">
-                    [code]
+                    [{labels.code}]
                   </a>
                 ) : null}
               </div>

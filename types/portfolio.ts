@@ -1,3 +1,5 @@
+export type Locale = 'en' | 'es'
+
 export interface Portfolio {
   terminal: TerminalIdentity
   profile: Profile
@@ -5,7 +7,6 @@ export interface Portfolio {
   experience: Experience[]
   projects: Project[]
   education: Education[]
-  hobbies: string[]
 }
 
 export interface TerminalIdentity {
@@ -17,7 +18,6 @@ export interface Profile {
   name: string
   role: string
   location: string
-  email: string
   github: string
   linkedin: string
   intro: string
@@ -35,7 +35,7 @@ export interface Experience {
   company: string
   date_start: string
   date_end: string
-  badges: string[]
+  badges: Array<'current'>
   /** Bullet points. `**text**` is rendered with emphasis. */
   highlights: string[]
   technologies: string[]
@@ -55,4 +55,16 @@ export interface Education {
   title: string
   institution: string
   meta: string[]
+}
+
+export interface UiCopy {
+  location: string
+  github: string
+  linkedin: string
+  tech: string
+  live: string
+  code: string
+  current: string
+  sections: string
+  switchLanguage: string
 }
