@@ -18,6 +18,7 @@ const stackItems = {
 
 const tech = {
   tecso: ['React', 'TypeScript', 'Flutter', 'Dart', 'Material UI', 'REST APIs', 'Git', 'Docker'],
+  freelance: ['React', 'Ionic', 'JavaScript', 'Git'],
   shalion: ['Node.js', 'Playwright', 'JavaScript', 'SQL', 'Snowflake', 'Google Sheets'],
   infinixsoft: ['React', 'Next.js', 'JavaScript', 'Git', 'REST APIs'],
 }
@@ -93,8 +94,8 @@ export const personalInfo: Record<Locale, Portfolio> = {
         position: 'Front End & Mobile Developer',
         company: 'Tecso',
         date_start: 'Dec 2024',
-        date_end: 'Jun 2026',
-        badges: [],
+        date_end: 'Present',
+        badges: ['current'],
         highlights: [
           'Development and maintenance of **Skyloop**, a drone operations platform.',
           'Building web and mobile interfaces, integrating APIs and shipping new features in collaboration with design, backend and QA teams.',
@@ -113,6 +114,19 @@ export const personalInfo: Record<Locale, Portfolio> = {
           'Built scrapers for dynamic websites and ran quality checks to ensure reliable data.',
         ],
         technologies: tech.shalion,
+      },
+      {
+        id: 'freelance',
+        position: 'Front End Developer',
+        company: 'Freelance',
+        date_start: 'Aug 2023',
+        date_end: 'Feb 2024',
+        badges: [],
+        highlights: [
+          'Developed a **job portal** as a hybrid web and mobile application using React and Ionic.',
+          'Built shared UI components and flows that worked across the web experience and the mobile app.',
+        ],
+        technologies: tech.freelance,
       },
       {
         id: 'infinixsoft',
@@ -180,8 +194,8 @@ export const personalInfo: Record<Locale, Portfolio> = {
         position: 'Desarrolladora Front End y Mobile',
         company: 'Tecso',
         date_start: 'Dic 2024',
-        date_end: 'Jun 2026',
-        badges: [],
+        date_end: 'Present',
+        badges: ['current'],
         highlights: [
           'Desarrollo y mantenimiento de **Skyloop**, una plataforma de operaciones de drones.',
           'Construcción de interfaces web y móviles, integración de APIs y desarrollo de nuevas funcionalidades junto a los equipos de diseño, backend y QA.',
@@ -200,6 +214,19 @@ export const personalInfo: Record<Locale, Portfolio> = {
           'Construí scrapers para sitios dinámicos y realicé controles de calidad para asegurar datos confiables.',
         ],
         technologies: tech.shalion,
+      },
+      {
+        id: 'freelance',
+        position: 'Desarrolladora Front End',
+        company: 'Freelance',
+        date_start: 'Ago 2023',
+        date_end: 'Feb 2024',
+        badges: [],
+        highlights: [
+          'Desarrollé un **portal de empleo** como aplicación híbrida web y mobile con React e Ionic.',
+          'Construí componentes y flujos de UI compartidos para la experiencia web y la app móvil.',
+        ],
+        technologies: tech.freelance,
       },
       {
         id: 'infinixsoft',
