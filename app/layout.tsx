@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
+import { themeInitScript } from '../lib/theme'
 import './globals.css'
 
 const jetbrains = JetBrains_Mono({
@@ -17,7 +18,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className={`${jetbrains.variable} bg-bg font-mono text-fg antialiased`}>{children}</body>
     </html>
   )

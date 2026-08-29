@@ -15,6 +15,7 @@
   --color-red: #ff5f57;
   --color-amber: #febc2e;
   --color-green: #28c840;
+  --shadow-terminal: 0 24px 80px -32px rgba(0, 0, 0, 0.9);
 }
 
 @theme inline {
@@ -23,6 +24,20 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+  --color-bg: #f2efe9;
+  --color-panel: #fbfaf7;
+  --color-bar: #f0ebe3;
+  --color-line: #d8d1c6;
+  --color-fg: #1f1e1c;
+  --color-muted: #5f5b55;
+  --color-dim: #8a857c;
+  --color-pink: #d14888;
+  --shadow-terminal: 0 18px 50px -28px rgba(55, 40, 25, 0.22);
 }
 
 body {
@@ -32,7 +47,7 @@ body {
 
 ::selection {
   background-color: color-mix(in srgb, var(--color-pink) 35%, transparent);
-  color: var(--color-white);
+  color: var(--color-fg);
 }
 
 ::-webkit-scrollbar {
@@ -77,6 +92,16 @@ body {
 
   .tag {
     @apply rounded-sm border border-pink/40 bg-pink/10 px-1.5 py-0.5 text-[10px] tracking-wide text-pink;
+  }
+
+  .headerChip {
+    @apply flex items-center justify-center rounded-sm border border-line px-1.5 py-0.5 text-[11px] tracking-wide text-dim transition-colors hover:border-pink/50 hover:text-pink;
+  }
+
+  .sr-only {
+    @apply absolute h-px w-px overflow-hidden whitespace-nowrap border-0 p-0;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
   }
 }
 

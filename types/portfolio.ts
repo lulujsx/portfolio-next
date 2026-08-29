@@ -1,4 +1,5 @@
 export type Locale = 'en' | 'es'
+export type Theme = 'dark' | 'light'
 
 export interface Portfolio {
   terminal: TerminalIdentity
@@ -57,6 +58,16 @@ export interface Education {
   meta: string[]
 }
 
+export interface TerminalCopy {
+  commands: { name: string; description: string }[]
+  hintBefore: string
+  hintAfter: string
+  notFound: string
+  notFoundHint: string
+  emailOpening: string
+  inputLabel: string
+}
+
 export interface UiCopy {
   location: string
   github: string
@@ -67,4 +78,13 @@ export interface UiCopy {
   current: string
   sections: string
   switchLanguage: string
+  switchToLight: string
+  switchToDark: string
+  sectionAbout: { title: string; subtitle: string }
+  sectionStack: { title: string; subtitle: string }
+  sectionExperience: { title: string; subtitle: string }
+  sectionProjects: { title: string; subtitle: string }
+  sectionEducation: { title: string; subtitle: string }
+  terminal: TerminalCopy
 }
+
