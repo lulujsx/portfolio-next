@@ -14,12 +14,9 @@ export default function Whoami({ profile, labels }: Props) {
 
   return (
     <div className="rounded-md border border-pink/25 bg-pink/[0.02] p-4 sm:p-5">
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-        <h1 className="text-[15px] font-medium text-fg sm:text-base">{profile.name}</h1>
-        <span className="tag">{profile.role}</span>
-      </div>
+      <h1 className="sr-only">{profile.name}</h1>
 
-      <dl className="mt-4 space-y-2 text-[13px] sm:space-y-1.5">
+      <dl className="space-y-2 text-[13px] sm:space-y-1.5">
         {rows.map((row) => (
           <div key={row.label} className="grid gap-x-6 sm:grid-cols-[7rem_minmax(0,1fr)]">
             <dt className="text-xs text-dim sm:text-[13px]">{row.label}</dt>

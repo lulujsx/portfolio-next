@@ -1,11 +1,14 @@
-import { Locale, TerminalIdentity, UiCopy } from '../types/portfolio'
+import ThemeToggle from './ThemeToggle'
+import { Locale, TerminalIdentity, Theme, UiCopy } from '../types/portfolio'
 
 type Props = {
   terminal: TerminalIdentity
   sections: { id: string; label: string }[]
   locale: Locale
+  theme: Theme
   labels: UiCopy
   onToggleLocale: () => void
+  onToggleTheme: () => void
   children: React.ReactNode
 }
 
@@ -13,14 +16,16 @@ export default function TerminalWindow({
   terminal,
   sections,
   locale,
+  theme,
   labels,
   onToggleLocale,
+  onToggleTheme,
   children,
 }: Props) {
   const title = `${terminal.user}@${terminal.host}: ~`
 
   return (
-    <div className="rounded-lg border border-line bg-panel shadow-[0_24px_80px_-32px_rgba(0,0,0,0.9)]">
+    <div className="rounded-lg border border-line bg-panel shadow-[var(--shadow-terminal)]">
       <header className="sticky top-0 z-20 rounded-t-[7px] border-b border-line bg-bar/95 backdrop-blur-sm">
         <div className="flex items-center gap-3 px-3 py-2 sm:px-4">
           <div className="flex shrink-0 items-center gap-1.5" aria-hidden>
@@ -40,7 +45,7 @@ export default function TerminalWindow({
             +
           </span>
 
-          <div className="ml-auto flex items-center gap-3 sm:gap-4">
+          <div className="ml-auto flex items-center gap-2 sm:gap-3">
             <nav aria-label={labels.sections} className="hidden items-center gap-4 text-xs md:flex">
               {sections.map((section) => (
                 <a
@@ -58,7 +63,7 @@ export default function TerminalWindow({
               onClick={onToggleLocale}
               aria-label={labels.switchLanguage}
               title={labels.switchLanguage}
-              className="flex items-center gap-1 rounded-sm border border-line px-1.5 py-0.5 text-[11px] tracking-wide transition-colors hover:border-pink/50"
+              className="headerChip gap-1"
             >
               <span className={locale === 'en' ? 'text-pink' : 'text-dim'}>EN</span>
               <span className="text-dim" aria-hidden>
@@ -67,11 +72,11 @@ export default function TerminalWindow({
               <span className={locale === 'es' ? 'text-pink' : 'text-dim'}>ES</span>
             </button>
 
-            <div className="flex shrink-0 items-center gap-3 text-xs text-dim" aria-hidden>
-              <span>–</span>
-              <span>□</span>
-              <span>✕</span>
-            </div>
+            <ThemeToggle
+              theme={theme}
+              label={theme === 'dark' ? labels.switchToLight : labels.switchToDark}
+              onToggle={onToggleTheme}
+            />
           </div>
         </div>
 

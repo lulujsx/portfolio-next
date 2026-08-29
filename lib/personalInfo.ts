@@ -2,11 +2,14 @@ import { Locale, Portfolio, UiCopy } from '../types/portfolio'
 
 const terminal = {
   user: 'lulu',
-  host: 'Dev-Portfolio',
+  host: 'lulujs.dev',
 } as const
 
 const github = 'github.com/lulujsx'
 const linkedin = 'linkedin.com/in/luanavallejos'
+
+export const email = 'luanalorenavallejos@gmail.com'
+export const movies = ['Kill Bill', 'Mysterious Skin', 'Possession']
 
 const stackItems = {
   frontend: ['React', 'Next.js', 'TypeScript', 'JavaScript'],
@@ -55,6 +58,27 @@ export const uiCopy: Record<Locale, UiCopy> = {
     current: 'current',
     sections: 'Sections',
     switchLanguage: 'Switch to Spanish',
+    switchToLight: 'Switch to light theme',
+    switchToDark: 'Switch to dark theme',
+    sectionAbout: { title: 'ABOUT ME', subtitle: 'Front End & Mobile Developer' },
+    sectionStack: { title: 'STACK', subtitle: 'Technologies & tools' },
+    sectionExperience: { title: 'EXPERIENCE', subtitle: 'Professional experience' },
+    sectionProjects: { title: 'PROJECTS', subtitle: 'Selected work' },
+    sectionEducation: { title: 'EDUCATION', subtitle: 'Academic background' },
+    terminal: {
+      commands: [
+        { name: 'help', description: 'list available commands' },
+        { name: 'clear', description: 'clear the terminal' },
+        { name: 'email', description: 'send me an email' },
+        { name: 'movies', description: 'my favorite movies' },
+      ],
+      hintBefore: 'For a list of available commands, type ',
+      hintAfter: '.',
+      notFound: 'command not found:',
+      notFoundHint: "Type 'help' for a list of commands.",
+      emailOpening: 'Opening your email client…',
+      inputLabel: 'Terminal command input',
+    },
   },
   es: {
     location: 'ubicación',
@@ -66,6 +90,27 @@ export const uiCopy: Record<Locale, UiCopy> = {
     current: 'actual',
     sections: 'Secciones',
     switchLanguage: 'Cambiar a inglés',
+    switchToLight: 'Cambiar a tema claro',
+    switchToDark: 'Cambiar a tema oscuro',
+    sectionAbout: { title: 'SOBRE MÍ', subtitle: 'Desarrolladora Front End y Mobile' },
+    sectionStack: { title: 'STACK', subtitle: 'Tecnologías y herramientas' },
+    sectionExperience: { title: 'EXPERIENCIA', subtitle: 'Experiencia profesional' },
+    sectionProjects: { title: 'PROYECTOS', subtitle: 'Trabajos seleccionados' },
+    sectionEducation: { title: 'EDUCACIÓN', subtitle: 'Formación académica' },
+    terminal: {
+      commands: [
+        { name: 'help', description: 'lista de comandos disponibles' },
+        { name: 'clear', description: 'limpiar la terminal' },
+        { name: 'email', description: 'enviarme un email' },
+        { name: 'movies', description: 'mis películas favoritas' },
+      ],
+      hintBefore: 'Para ver la lista de comandos disponibles, escribí ',
+      hintAfter: '.',
+      notFound: 'comando no encontrado:',
+      notFoundHint: "Escribí 'help' para ver los comandos disponibles.",
+      emailOpening: 'Abriendo tu cliente de correo…',
+      inputLabel: 'Entrada de comandos de la terminal',
+    },
   },
 }
 
